@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يوتيوبي | السجل</title>
+    <link rel="stylesheet" href="css/bootstrap-rtl.css">
+  
+</head>
+<body class="mt-5 rtl">
+    
+     <div id="top-menu">
+        <div class="container-fluid">
+           <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+              <a class="navbar-brand" href="index.html">يوتيوبي</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-lg-auto px-md-0 px-lg-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">الفيديوهات المقترحة</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ml-lg-3" href="index.html">المرفوعة حديثا</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pl-0" href="index.html" >ألفيديوهات الرائجة</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link btn btn-info text-white d-inline-block" href="#"  data-toggle="modal" data-target="#loginModal">تسجيل الدخول</a>
+                    </li>
+                </ul>
+
+                <div class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" a>
+                  <button class="btn btn-outline-info my-2 my-sm-0 " type="submit" onclick="location.href='search.html';">ابحث</button>
+                </div>
+              </div>
+           </nav>
+
+    
+           <!-- Modal -->
+           <div class="modal fade" id="loginModal" tabindex="-1" >
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
+                          <button type="button" class="close" data-dismiss="modal">
+                              <span>&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <form accept="" method="">
+                              <div class="form-group">
+                                <label for="email" class="col-form-label">البريد الاكتروني:</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                              </div>
+                              <div class="form-group">
+                                  <label for="password" class="col-form-label">كلمة السر:</label>
+                                  <input type="password" class="form-control" id="password" name="password">
+                              </div>
+                            </form>
+                      </div>
+                      <div class="modal-footer">
+                          <a href="">نسيت كلمة المرور</a>
+                          <a href="" class="mx-auto">انشاء حساب</a>
+                          <button type="button" class="btn btn-primary">دخول</button>
+                      </div>
+                  </div>
+              </div>
+           </div>
+
+
+          
+           <!-- -->
+        </div>
+    </div>
+
+
+    <div class="history-page pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <input type="search" placeholder="ابحث في التاريخ" class="form-control my-3 border-0">
+                    <hr>
+                    <label>نوع السجل:</label>
+                    <div class="list-group list-group-flush pr-0" id="list-tab">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" >سجل المشاهدة</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" >سجل البحث</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" >التعليقات</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" >المنتدى</a>
+                    </div>
+                    <label class="mt-4"> التاريخ:</label>
+                    <div class="list-group list-group-flush pr-0" id="list-tab">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" >منذ 24 ساعة</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" >منذ 3 ايام</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" >منذ اسبوع</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" >منذ شهر</a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 my-3">
+                                <div class="card">
+                                    <div class="card-horizontal d-md-flex d-block">
+                                        <div>
+                                            <a href="watch.html">
+                                            <img class="mr-4 card-top-image" src="img/thumbnail/devtools.jpg" alt="Card image cap">
+                                            </a>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <a href="watch.html"><h4>كيف تستخدم أدوات المطوِّر DevTools في Chrome</h4></a>
+                                            <p>نتعرف في هذا الدرس على أدوات المطور DevTools التي يتيحها متصفح google chrome والتي تمكنك من تتبع مشاكل التنسيق CSS بفعالية،
+                                            واكتشاف أخطاء Javascript بسهولة، بالإضافة إلى أنها تقدم لك إضاءات ومعلومات حول أداء الموقع.
+                                            </p>
+                                            <small class="text-muted">
+                                            <i class="fas fa-film"></i> <span>1 مليون مشاهدة</span>
+                                            <i class="fas fa-clock"></i> <span>قبل 9 أشهر</span>
+                                            </small>
+                                            <a href="channel.html" class="search-link">
+                                            <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                            <span class="card-text">أكاديمية حسوب</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3">
+                                <div class="card">
+                                    <div class="card-horizontal d-md-flex d-block">
+                                        <div>
+                                            <a href="watch.html">
+                                            <img class="mr-4 card-top-image" src="img/thumbnail/mostaql2.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <a href="watch.html"><h4>أفضل النصائح لاختيار أفضل المستقلين والحفاظ على معدل توظيف مرتفع</h4></a>
+                                            <p>سنتعلم من خلال هذا الدرس أفضل النصائح التي يمكن أن تتبعها للحفاظ على معدل توظيف عالٍ لحسابك، 
+                                                وما هي الخطوات التي يجب أن تتبعها لتوظيف أفضل المستقلين
+                                            </p>
+                                            <small class="text-muted">
+                                                <i class="fas fa-film"></i> <span>900 مشاهدة</span>
+                                                <i class="fas fa-clock"></i> <span>قبل 4 أشهر</span>
+                                            </small>
+                                            <a href="channel.html" class="search-link">
+                                                <img src="img/mostaql.png" alt="" width="30" class="rounded-circle ml-3">
+                                                <span class="card-text">مستقل</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3">
+                                <div class="card">
+                                    <div class="card-horizontal d-md-flex d-block">
+                                        <div>
+                                            <a href="watch.html">
+                                            <img class="mr-4 card-top-image" src="img/thumbnail/khamsat3.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <a href="watch.html"><h4>خطوات بسيطة للتسجيل بموقع خمسات والبدء بربح المال</h4></a>
+                                            <p>ستتعرف من خلال هذا الدرس على كيفية إنشاء حساب في موقع خمسات، 
+                                                وأيضًا ستتعرف على كيفية استعمال موقع خمسات وكيف تعرض خدماتك عليه لكي تربح المال
+                                            </p>
+                                            <small class="text-muted">
+                                                <i class="fas fa-film"></i> <span>200 مشاهدة</span>
+                                                <i class="fas fa-clock"></i> <span>قبل 5 أيام</span>
+                                            </small>
+                                            <a href="channel.html" class="search-link">
+                                                <img src="img/khamsat.jpg" alt="" width="30" class="rounded-circle ml-3">
+                                                <span class="card-text">خمسات</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3">
+                                <div class="card">
+                                    <div class="card-horizontal d-md-flex d-block">
+                                        <div>
+                                            <a href="watch.html">
+                                                <img class="mr-4 card-top-image" src="img/thumbnail/frontend.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <a href="watch.html"><h4>دورة تطوير واجهات المستخدم - أكاديمية حسوب </h4></a>
+                                            <p>تم إعداد هذه الدورة على يد نخبة من أفضل المبرمجين العرب بتسلسل بسيط وواضح، بإنهائك لها ستصبح مطوّر واجهات مستخدم دون الحاجة
+                                                لامتلاك معرفة سابقة بالبرمجة، خلال هذه ستتعلم تطوير واجهات المستخدم خطوة بخطوة اعتمادًا على التجربة
+                                                العملية والمادة العلمية التي يقدمها مدربون محترفون.
+                                            </p>
+                                            <small class="text-muted">
+                                                <i class="fas fa-film"></i> <span>200 ألف مشاهدة</span>
+                                                <i class="fas fa-clock"></i> <span>قبل 4 أشهر</span>
+                                            </small>
+                                            <a href="channel.html" class="search-link">
+                                                <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                                <span class="card-text">أكاديمية حسوب</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3">
+                                <div class="card">
+                                    <div class="card-horizontal d-md-flex d-block">
+                                        <div>
+                                            <a href="watch.html">
+                                                <img class="mr-4 card-top-image" src="img/thumbnail/khamsat1.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <a href="watch.html"><h4>تعلم كيف تقدم مهاراتك على موقع خمسات</h4></a>
+                                            <p>ستتعلم في هذا الدرس كيفية ربح مبالغ كبيرة من خلال تقديم مهاراتك على موقع خمسات، 
+                                                عند مشاهدتك لهذا المقطع واتباعك الخطوات بشكل جيد سيصل ربحك إلى 100$ يوميًا
+                                            </p>
+                                            <small class="text-muted">
+                                                <i class="fas fa-film"></i> <span>500 مشاهدة</span>
+                                                <i class="fas fa-clock"></i> <span>قبل 2 أشهر</span>
+                                            </small>
+                                            <a href="channel.html" class="search-link">
+                                                <img src="img/khamsat.jpg" alt="" width="30" class="rounded-circle ml-3">
+                                                <span class="card-text">خمسات</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3">
+                                <div class="card">
+                                    <div class="card-horizontal d-md-flex d-block">
+                                        <div>
+                                            <a href="watch.html">
+                                                <img class="mr-4 card-top-image" src="img/thumbnail/mostaql.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <a href="watch.html"><h4>وظف أفضل المستقلين الموجودين في  الوطن العربي - مستقل</h4></a>
+                                            <p>تعلم كيفية التواصل مع المستقلين الموجودين في مختلف البلدان العربية، وكيفية اختيار أفضل مستقل وتوظيفه لإنجاز أعمالك</p>
+                                            <small class="text-muted">
+                                                <i class="fas fa-film"></i> <span>1000 مشاهدة</span>
+                                                <i class="fas fa-clock"></i> <span>قبل سنة</span>
+                                            </small>
+                                            <a href="channel.html" class="search-link">
+                                                <img src="img/mostaql.png" alt="" width="30" class="rounded-circle ml-3">
+                                                <span class="card-text">مستقل</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3">
+                                <div class="card">
+                                    <div class="card-horizontal d-md-flex d-block">
+                                        <div>
+                                            <a href="watch.html">
+                                                <img class="mr-4 card-top-image" src="img/thumbnail/php.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <a href="watch.html"><h4>دورة تطوير تطبيقات الويب باستخدام لغة PHP - أكاديمية حسوب </h4></a>
+                                            <p>ستتعلم من خلال هذه الدورة أساسيات لغة PHP والتي تُعد من أهم وأقوى لغات البرمجة. أيضًا سنتعرف على إطار العمل المسهور Laravel
+                                            </p>
+                                            <small class="text-muted">
+                                                <i class="fas fa-film"></i> <span>1.6 مليون مشاهدة</span>
+                                                <i class="fas fa-clock"></i> <span>قبل 9 أشهر</span>
+                                            </small>
+                                            <a href="channel.html" class="search-link">
+                                                <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                                <span class="card-text">أكاديمية حسوب</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/dc9e78ad18.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
