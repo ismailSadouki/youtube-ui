@@ -5,40 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>يوتيوبي</title>
     <link rel="stylesheet" href="css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="css/index.css">
   
 </head>
 <body class="mt-5 rtl">
-    
+    <div class="layer"></div>
+
      <div id="top-menu">
         <div class="container-fluid">
-           <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-              <a class="navbar-brand" href="index.html">يوتيوبي</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
+           <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+               <i class="fas fa-bars fa-2x" id="toggler"></i>
+                <b>
+                    <a class="navbar-brand" href="index.html">
+                        يوتيوبي<span class="video-icon"><i class="fa fa-play-circle p-1"></i></span>
+                    </a>
+                </b>
+ 
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-lg-auto px-md-0 px-lg-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="index.html">الفيديوهات المقترحة</a>
+                    <a class="nav-link mr-2 px-3 ml-1" href="#">الفيديوهات المقترحة</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link ml-lg-3" href="index.html">المرفوعة حديثا</a>
+                    <a class="nav-link ml-lg-3 px-3 ml-1" href="#">المرفوعة حديثا</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link pl-0" href="index.html" tabindex="0">ألفيديوهات الرائجة</a>
+                    <a class="nav-link px-3 ml-1" href="#" >ألفيديوهات الرائجة</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link btn btn-info text-white d-inline-block" href="#"  data-toggle="modal" data-target="#loginModal">تسجيل الدخول</a>
-                    </li>
                 </ul>
 
                 <div class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" a>
+                  <input class="form-control mr-sm-2" type="search" placeholder="ابحث عن ..." a>
                   <button class="btn btn-outline-info my-2 my-sm-0 " type="submit" onclick="location.href='search.html';">ابحث</button>
                 </div>
               </div>
+              <i class="fas fa-search mr-4 search-icon"></i>
+              <a class="nav-link login" href="#"  data-toggle="modal" data-target="#loginModal">تسجيل الدخول</a>
+
            </nav>
+           <input type="search" class="form-control search-input " placeholder="ابحث عن ...">
 
     
            <!-- Modal -->
@@ -73,6 +78,58 @@
            </div>
 
 
+           <!-- sidebar -->
+           <div class="row pt-4">
+               <div id="wrap">
+                   <div class="sidebar">
+                      <ul class="list-group list-group-flush pl-0">
+                        <a href="index.html" class="list-group-item list-group-item-action">
+                            <i class="fas fa-home mr-2 purple"></i> الصفحة الرئيسية
+                        </a>
+                        <a href="index.html" class="list-group-item list-group-item-action">
+                            <i class="fab fa-algolia mr-2 purple"></i> الفيديوهات المقترحة
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="far fa-plus-square mr-2 purple"></i> المرفوعة حديثًا
+                         </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-fire-alt mr-2 purple"></i> الفيديوهات الرائجة
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-fire-alt mr-2 purple"></i> فيديوهاتي
+                        </a>
+                        <a href="log.html" class="list-group-item list-group-item-action">
+                            <i class="fas fa-history mr-2 purple"></i> سجل المشاهدة
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="far fa-share-square mr-2 purple"></i> الإشتراكات
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-film mr-2 purple"></i> الأفلام والعروض
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-gamepad mr-2 purple"></i> ألعاب فيديو
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-tshirt mr-2 purple"></i> الموضة والجمال
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-graduation-cap mr-2 purple"></i> محتوى تعليمي
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-cog mr-2 purple"></i> الإعدادات
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-question-circle mr-2 purple"></i> مساعدة
+                        </a>
+                        <a href="https://mostaql.com/u/ismail_sadouki" class="list-group-item list-group-item-action last-a">
+                          اسماعيل صدوقي
+                        &copy; 2021  
+                        </a>
+                      </ul>
+                   </div>
+               </div>
+           </div> <!-- End Sidebar -->
           
            <!-- -->
             <div class="content m-4">
@@ -81,7 +138,13 @@
                   <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card p-1 mb-4">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/restful.jpg" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/restful.jpg" alt="Card image cap">
+                                <time>9:14</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                                 <p class="card-title">شرح فلسفة RESTful - تعلم كيف تبني واجهات REST برمجية</p>
                             </div>
@@ -103,7 +166,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card p-1 mb-4">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/khamsat2.jpg" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/khamsat2.jpg" alt="Card image cap">
+                                <time>14:02</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                                 <p class="card-title"> أفضل طريقة لربح الكثير من المال من موقع خمسات</p>
                             </div>
@@ -125,7 +194,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/mostaql.png" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/mostaql.png" alt="Card image cap">
+                                <time>9:24</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                                 <p class="card-title">وظف أفضل المستقلين الموجودين في الوطن العربي - مستقل</p>
                             </div>
@@ -147,7 +222,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/mostaql1.jpg" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/mostaql1.jpg" alt="Card image cap">
+                                <time>2:25</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                             <p class="card-title">تواصل مع أفضل المبدعين العرب عن طريق منصة مستقل</p>
                             </div>
@@ -169,7 +250,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/khamsat1.png" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/khamsat1.png" alt="Card image cap">
+                                <time>1:25</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                                 <p class="card-title">تعلم كيف تقدم مهاراتك على موقع خمسات</p>
                             </div>
@@ -191,7 +278,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/restful.jpg" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/restful.jpg" alt="Card image cap">
+                                <time>3:02</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                                 <p class="card-title"> دورة تطوير تطبيقات الويب باستخدام لغة Ruby - أكاديمية حسوب</p>
                             </div>
@@ -213,7 +306,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/php.jpg" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/php.jpg" alt="Card image cap">
+                                <time>10:01</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                                 <p class="card-title">دورة تطوير تطبيقات الويب باستخدام لغة PHP - أكاديمية حسوب</p>
                             </div>
@@ -235,7 +334,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/mostaql2.png" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/mostaql2.png" alt="Card image cap">
+                                <time>9:22</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                                 <p class="card-title">أفضل النصائح لاختيار أفضل المستقلين والحفاظ على معدل توظيف مرتفع</p>
                             </div>
@@ -257,7 +362,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/restful.jpg" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/restful.jpg" alt="Card image cap">
+                                <time>7:08</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                             <p class="card-title">شرح فلسفة RESTful - تعلم كيف تبني واجهات REST برمجية</p>
                             </div>
@@ -279,7 +390,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/khamsat3.png" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/khamsat3.png" alt="Card image cap">
+                                <time>6:22</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                             <p class="card-title">خطوات بسيطة للتسجيل بموقع خمسات والبدء بربح المال</p>
                             </div>
@@ -301,7 +418,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/php.jpg" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/php.jpg" alt="Card image cap">
+                                <time>15:04</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                             <p class="card-title">دورة تطوير تطبيقات الويب باستخدام لغة PHP - أكاديمية حسوب</p>
                             </div>
@@ -323,7 +446,13 @@
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4 p-1">
                         <a href="watch.html">
-                            <img class="card-img-top" src="img/thumbnail/khamsat4.png" alt="Card image cap">
+                            <div class="card-icons">
+                                <img class="card-img-top" src="img/thumbnail/khamsat4.png" alt="Card image cap">
+                                <time>10:20</time>
+                                <i class="fa fa-play fa-2x"></i>
+                            </div>
+                        </a>
+                        <a href="watch.html">
                             <div class="card-body p-0">
                             <p class="card-title">أسرار العمل الحر والربح من موقع خمسات</p>
                             </div>
@@ -352,8 +481,10 @@
 
 
     <script src="https://kit.fontawesome.com/dc9e78ad18.js" crossorigin="anonymous"></script>
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="js/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
