@@ -1,14 +1,13 @@
-#search-filters-icon 
+.history-right-column
 {
-    cursor: pointer;
-}
-.filter-column {
-    display: none;
+    background-color: #fff;
+    height: 566px;
 }
 
-input:checked+span 
+.list-group-item.active
 {
-    color: #bf40bf ;
+    background-color: #bf40bf;
+    border-color: #bf40bf;
 }
 
 time
@@ -16,8 +15,13 @@ time
     bottom: 7px;
     left: 29px;
 }
-
-
+.history-page .remove {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    color: #2c3131c7;
+    cursor: pointer;
+}
 
 @media(max-width: 767px)
 {
@@ -36,7 +40,7 @@ time
     }
 }
 
-@media(min-width: 768px) and (max-width: 992px)
+@media(min-width: 768px) and (max-width: 1199px)
 {
     .card .card-horizontal .card-body .channel-img
     {
@@ -53,5 +57,13 @@ time
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+    }
+}
+
+@media(max-width: 991px)
+{
+    .card 
+    {
+        margin-top: 30px;
     }
 }

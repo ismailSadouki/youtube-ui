@@ -67,6 +67,17 @@ button:focus {
     overflow: hidden;
 }
 
+.card .card-horizontal .card-body p 
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-body {
+    min-width: 0;
+}
+
 time {
     position: absolute;
     bottom: 10px;
