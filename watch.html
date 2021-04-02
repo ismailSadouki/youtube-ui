@@ -5,74 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>يوتيوبي | مشاهدة</title>
     <link rel="stylesheet" href="css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/watch.css">
   
 </head>
 <body class="mt-5 rtl">
-    
+    <div class="layer"></div>
      <div id="top-menu">
         <div class="container-fluid">
-           <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-              <a class="navbar-brand" href="index.html">يوتيوبي</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-lg-auto px-md-0 px-lg-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">الفيديوهات المقترحة</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link ml-lg-3" href="index.html">المرفوعة حديثا</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link pl-0" href="index.html" tabindex="0">ألفيديوهات الرائجة</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link btn btn-info text-white d-inline-block" href="#"  data-toggle="modal" data-target="#loginModal">تسجيل الدخول</a>
-                    </li>
-                </ul>
-
-                <div class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" a>
-                  <button class="btn btn-outline-info my-2 my-sm-0 " type="submit" onclick="location.href='search.html';">ابحث</button>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+                <i class="fas fa-bars fa-2x" id="toggler"></i>
+                 <b>
+                     <a class="navbar-brand" href="index.html">
+                         يوتيوبي<span class="video-icon"><i class="fa fa-play-circle p-1"></i></span>
+                     </a>
+                 </b>
+  
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mx-lg-auto px-md-0 px-lg-auto">
+                   <li class="nav-item ">
+                     <a class="nav-link mr-2 px-3 ml-1" href="#">الفيديوهات المقترحة</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link ml-lg-3 px-3 ml-1" href="#">المرفوعة حديثا</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link px-3 ml-1" href="#" >ألفيديوهات الرائجة</a>
+                   </li>
+                 </ul>
+ 
+                 <div class="form-inline my-2 my-lg-0">
+                   <input class="form-control mr-sm-2" type="search" placeholder="ابحث عن ..." a>
+                   <button class="btn btn-outline-info my-2 my-sm-0 " type="submit" onclick="location.href='search.html';">ابحث</button>
+                 </div>
+               </div>
+               <i class="fas fa-search mr-4 search-icon"></i>
+               <a class="nav-link login" href="#"  data-toggle="modal" data-target="#loginModal">تسجيل الدخول</a>
+ 
+            </nav>
+            <input type="search" class="form-control search-input " placeholder="ابحث عن ...">
+ 
+     
+            <!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" >
+               <div class="modal-dialog modal-dialog-centered">
+                   <div class="modal-content">
+                       <div class="modal-header">
+                           <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
+                           <button type="button" class="close" data-dismiss="modal">
+                               <span>&times;</span>
+                           </button>
+                       </div>
+                       <div class="modal-body">
+                           <form accept="" method="">
+                               <div class="form-group">
+                                 <label for="email" class="col-form-label">البريد الاكتروني:</label>
+                                 <input type="email" class="form-control" id="email" name="email">
+                               </div>
+                               <div class="form-group">
+                                   <label for="password" class="col-form-label">كلمة السر:</label>
+                                   <input type="password" class="form-control" id="password" name="password">
+                               </div>
+                             </form>
+                       </div>
+                       <div class="modal-footer">
+                           <a href="">نسيت كلمة المرور</a>
+                           <a href="" class="mx-auto">انشاء حساب</a>
+                           <button type="button" class="btn btn-primary">دخول</button>
+                       </div>
+                   </div>
+               </div>
+            </div>
+ 
+ 
+            <!-- sidebar -->
+            <div class="row pt-4">
+                <div id="wrap">
+                    <div class="sidebar">
+                       <ul class="list-group list-group-flush pl-0">
+                         <a href="index.html" class="list-group-item list-group-item-action">
+                             <i class="fas fa-home mr-2 purple"></i> الصفحة الرئيسية
+                         </a>
+                         <a href="index.html" class="list-group-item list-group-item-action">
+                             <i class="fab fa-algolia mr-2 purple"></i> الفيديوهات المقترحة
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="far fa-plus-square mr-2 purple"></i> المرفوعة حديثًا
+                          </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-fire-alt mr-2 purple"></i> الفيديوهات الرائجة
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-fire-alt mr-2 purple"></i> فيديوهاتي
+                         </a>
+                         <a href="log.html" class="list-group-item list-group-item-action">
+                             <i class="fas fa-history mr-2 purple"></i> سجل المشاهدة
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="far fa-share-square mr-2 purple"></i> الإشتراكات
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-film mr-2 purple"></i> الأفلام والعروض
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-gamepad mr-2 purple"></i> ألعاب فيديو
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-tshirt mr-2 purple"></i> الموضة والجمال
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-graduation-cap mr-2 purple"></i> محتوى تعليمي
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-cog mr-2 purple"></i> الإعدادات
+                         </a>
+                         <a href="#" class="list-group-item list-group-item-action">
+                             <i class="fas fa-question-circle mr-2 purple"></i> مساعدة
+                         </a>
+                         <a href="https://mostaql.com/u/ismail_sadouki" class="list-group-item list-group-item-action last-a">
+                           اسماعيل صدوقي
+                         &copy; 2021  
+                         </a>
+                       </ul>
+                    </div>
                 </div>
-              </div>
-           </nav>
-
-    
-           <!-- Modal -->
-           <div class="modal fade" id="loginModal" tabindex="-1" >
-              <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
-                          <button type="button" class="close" data-dismiss="modal">
-                              <span>&times;</span>
-                          </button>
-                      </div>
-                      <div class="modal-body">
-                          <form accept="" method="">
-                              <div class="form-group">
-                                <label for="email" class="col-form-label">البريد الاكتروني:</label>
-                                <input type="email" class="form-control" id="email" name="email">
-                              </div>
-                              <div class="form-group">
-                                  <label for="password" class="col-form-label">كلمة السر:</label>
-                                  <input type="password" class="form-control" id="password" name="password">
-                              </div>
-                            </form>
-                      </div>
-                      <div class="modal-footer">
-                          <a href="">نسيت كلمة المرور</a>
-                          <a href="" class="mx-auto">انشاء حساب</a>
-                          <button type="button" class="btn btn-primary">دخول</button>
-                      </div>
-                  </div>
-              </div>
-           </div>
-
-
+            </div> <!-- End Sidebar -->
+           
           
            <!-- -->
            
@@ -85,7 +143,7 @@
     <div class="watch-page pt-5">
         <div class="container-fluid">
             <div class="card border-0">
-                <div class="row">
+                <div class="row px-2">
                     <div class="col-md-7">
                         <video controls poster="img/poster.png" class="w-100" loop muted >
                         <track kind="captions" src="video/caption.vtt"  srclang="ar" label="عربي" default></track>
@@ -105,10 +163,11 @@
                                 </a>
                             </small>
                             <a href="watch.html"><h4>دورة تطوير واجهات المستخدم - أكاديمية حسوب </h4></a>
-                            <p>تم إعداد هذه الدورة على يد نخبة من أفضل المبرمجين العرب بتسلسل بسيط وواضح، بإنهائك لها ستصبح مطوّر واجهات مستخدم دون الحاجة
+                            <p>تم إعداد هذه الدورة على يد نخبة من أفضل المبرمجين العرب بتسلسل بسيط وواضح، بإنهائك لها ستصبح مطوّر واجهات مستخدم <span id="dots">...</span><span id="more"> دون الحاجة
                                 لامتلاك معرفة سابقة بالبرمجة، خلال هذه ستتعلم تطوير واجهات المستخدم خطوة بخطوة اعتمادًا على التجربة
-                                العملية والمادة العلمية التي يقدمها مدربون محترفون.
+                                العملية والمادة العلمية التي يقدمها مدربون محترفون.</span>
                             </p>
+                            <button class="btn mb-4" id="myBtn">عرض المزيد</button>
                         </div>
                         <div class="watch-icons">
                             <i class="far fa-heart bg-secondary p-1 rounded-circle mr-1 text-white" title="احببته"></i>
@@ -121,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="row mt-4">
+            <div class="row mt-4 px-2">
                 <!-- comments -->
                 <div class="col-lg-7 order-2 order-lg-1">
                     <div class="comments">
@@ -147,7 +206,7 @@
                                         <div class="row">
                                             <div class="col-2">
                                                 <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-                                                <p class="text-secondary text-center">منذ 20 دقيقة</p>
+                                                <p class="text-secondary text-center reply-time">منذ 20 دقيقة</p>
                                             </div>
                                             <div class="col-10">
                                                 <p>
@@ -162,17 +221,17 @@
                                                <div class="clearfix"></div>
                                                 <p>دورة رائعة</p>
                                                 <p>
-                                                    <a class="float-right btn text-white btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> الردود</a>
+                                                    <a class="reply float-right btn text-white btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> الردود</a>
                                                     <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجبني</a>
                                                </p>
                                             </div>
                                         </div>
-                                        <div class="card ml-5 mt-3">
+                                        <div class="card ml-5 mt-3  card-inner">
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-2">
                                                         <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-                                                        <p class="text-secondary text-center">منذ 10 دقائق</p>
+                                                        <p class="text-secondary text-center reply-time">منذ 10 دقائق</p>
                                                     </div>
                                                     <div class="col-10">
                                                         <p><a href="#"><strong>محمد امين</strong></a></p>
@@ -191,7 +250,7 @@
                                         <div class="row">
                                             <div class="col-2">
                                                 <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-                                                <p class="text-secondary text-center">منذ 20 دقيقة</p>
+                                                <p class="text-secondary text-center reply-time">منذ 20 دقيقة</p>
                                             </div>
                                             <div class="col-10">
                                                 <p>
@@ -206,17 +265,17 @@
                                                <div class="clearfix"></div>
                                                 <p>دورة رائعة</p>
                                                 <p>
-                                                    <a class="float-right btn text-white btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> الردود</a>
+                                                    <a class="reply float-right btn text-white btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> الردود</a>
                                                     <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجبني</a>
                                                </p>
                                             </div>
                                         </div>
-                                        <div class="card ml-5 mt-3">
+                                        <div class="card ml-5 mt-3  card-inner">
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-2">
                                                         <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-                                                        <p class="text-secondary text-center">منذ 10 دقائق</p>
+                                                        <p class="text-secondary text-center reply-time">منذ 10 دقائق</p>
                                                     </div>
                                                     <div class="col-10">
                                                         <p><a href="#"><strong>محمد امين</strong></a></p>
@@ -235,7 +294,7 @@
                                         <div class="row">
                                             <div class="col-2">
                                                 <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-                                                <p class="text-secondary text-center">منذ 20 دقيقة</p>
+                                                <p class="text-secondary text-center reply-time">منذ 20 دقيقة</p>
                                             </div>
                                             <div class="col-10">
                                                 <p>
@@ -250,17 +309,17 @@
                                                <div class="clearfix"></div>
                                                 <p>دورة رائعة</p>
                                                 <p>
-                                                    <a class="float-right btn text-white btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> الردود</a>
+                                                    <a class="reply float-right btn text-white btn-info mr-2 mt-4"> <i class="fa fa-reply"></i> الردود</a>
                                                     <a class="float-right btn text-white btn-info mt-4"> <i class="fa fa-heart"></i> اعجبني</a>
                                                </p>
                                             </div>
                                         </div>
-                                        <div class="card ml-5 mt-3">
+                                        <div class="card ml-5 mt-3  card-inner">
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-2">
                                                         <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
-                                                        <p class="text-secondary text-center">منذ 10 دقائق</p>
+                                                        <p class="text-secondary text-center reply-time">منذ 10 دقائق</p>
                                                     </div>
                                                     <div class="col-10">
                                                         <p><a href="#"><strong>محمد امين</strong></a></p>
@@ -286,7 +345,11 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <a href="watch.html">
-                                <img class="w-100" src="img/thumbnail/ruby.jpg" alt="">
+                                    <div class="card-icons">
+                                        <img class="w-100 h-100" src="img/thumbnail/ruby.jpg" alt="">
+                                        <time>10:13</time>
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </div>
                                 </a>
                             </div>
                             <div class="col-sm-7">
@@ -307,7 +370,11 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <a href="watch.html">
-                                    <img class="w-100" src="img/thumbnail/mostaql2.png" alt="">
+                                    <div class="card-icons">
+                                        <img class="w-100 h-100" src="img/thumbnail/mostaql2.png" alt="">
+                                        <time>10:25</time>
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </div>
                                 </a>
                             </div>
                             <div class="col-sm-7">
@@ -328,7 +395,11 @@
                         <div class="row">
                             <div class="col-sm-5">
                             <a href="watch.html">
-                                <img class="w-100" src="img/thumbnail/khamsat3.png" alt="">
+                                <div class="card-icons">
+                                    <img class="w-100 h-100" src="img/thumbnail/khamsat3.png" alt="">
+                                    <time>13:02</time>
+                                    <i class="fa fa-play fa-2x"></i>
+                                </div>
                             </a>
                             </div>
                             <div class="col-sm-7">
@@ -349,7 +420,11 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <a href="watch.html">
-                                    <img class="w-100" src="img/thumbnail/khamsat1.png" alt="">
+                                    <div class="card-icons">
+                                        <img class="w-100 h-100" src="img/thumbnail/khamsat1.png" alt="">
+                                        <time>18:20</time>
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </div>
                                 </a>
                             </div>
                             <div class="col-sm-7">
@@ -370,7 +445,11 @@
                         <div class="row">
                             <div class="col-sm-5">
                             <a href="watch.html">
-                                <img class="w-100" src="img/thumbnail/mostaql.png" alt="">
+                                <div class="card-icons">
+                                    <img class="w-100 h-100" src="img/thumbnail/mostaql.png" alt="">
+                                    <time>17:02</time>
+                                    <i class="fa fa-play fa-2x"></i>
+                                </div>
                             </a>
                             </div>
                             <div class="col-sm-7">
@@ -391,7 +470,11 @@
                         <div class="row">
                             <div class="col-sm-5">
                             <a href="watch.html">
-                                <img class="w-100" src="img/thumbnail/php.jpg" alt="">
+                                <div class="card-icons">
+                                    <img class="w-100 h-100" src="img/thumbnail/php.jpg" alt="">
+                                    <time>13:22</time>
+                                    <i class="fa fa-play fa-2x"></i>
+                                </div>
                             </a>
                             </div>
                             <div class="col-sm-7">
@@ -412,7 +495,11 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <a href="watch.html">
-                                    <img class="w-100" src="img/thumbnail/app.jpg" alt="">
+                                    <div class="card-icons">
+                                        <img class="w-100 h-100" src="img/thumbnail/app.jpg" alt="">
+                                        <time>22:18</time>
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </div>
                                 </a>
                             </div>
                             <div class="col-sm-7">
@@ -437,8 +524,10 @@
 
 
     <script src="https://kit.fontawesome.com/dc9e78ad18.js" crossorigin="anonymous"></script>
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/watch.js"></script>
 </body>
 </html>
